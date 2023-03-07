@@ -5,5 +5,5 @@
         header('location:form.php?erro=2');
         die; //ou exit
     }
-    #echo 'login realizado com sucesso';
+    echo 'login realizado com sucesso';
 ?>
