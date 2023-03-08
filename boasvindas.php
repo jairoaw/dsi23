@@ -6,6 +6,8 @@
         die; //ou exit
     }
     echo 'login realizado com sucesso';
+
+
 ?>
 <p>
     <a href="logout.php">Sair</a>
