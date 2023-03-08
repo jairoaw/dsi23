@@ -4,9 +4,11 @@
         case 1:
             echo 'usuario o usenha invalidos';
             break;
-        
         case 2:
             echo 'vc nao está autenticado';
+            break;
+        case 3:
+            echo 'vc saiu com sucesso';
             break;
     }
 
