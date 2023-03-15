@@ -4,7 +4,13 @@
     $usuario = $_POST['username'] ?? false;
     $senha = $_POST['password'] ?? false;
 
-    $sql = $pdo -> query('INSERT INTO usuarios (username, password) VALUES ($usuario, $senha)');
-     
+    //prepara a consulta
+    $sql = $pdo -> prepare('INSERT INTO usuarios (username, password) VALUES ($usuario, $senha)');
+    $sql -> bindParam(1, $usuario, PDO::PARAM_STR);  #evita ataques de sql injection
+    
+    //roda a consulta no banco
+    $sql-> execute();
+
+         
 ?>
 
